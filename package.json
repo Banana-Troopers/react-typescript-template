@@ -2,6 +2,7 @@
   "name": "react-typescript-template",
   "version": "0.0.1",
   "private": true,
+  "license": "MIT",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -10,9 +11,13 @@
     "coverage": "jest --all --coverage",
     "eject": "react-scripts eject",
     "lint": "eslint ./src --fix",
+    "lint:css": "stylelint './src/**/*.css'",
+    "lint:css:fix": "stylelint './src/**/*.css' --fix",
     "commit": "cz",
     "prepare": "husky install",
-    "prettier": "prettier --config .prettierrc.js --write './**/*.js'"
+    "prettier": "prettier --config .prettierrc.js --write './**/*.js'",
+    "storybook": "start-storybook -p 6006 -s public",
+    "build-storybook": "build-storybook -s public"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^1.8.1",
@@ -33,7 +38,18 @@
     "web-vitals": "^2.1.0"
   },
   "devDependencies": {
+    "@storybook/addon-actions": "^6.5.10",
+    "@storybook/addon-essentials": "^6.5.10",
+    "@storybook/addon-interactions": "^6.5.10",
+    "@storybook/addon-links": "^6.5.10",
+    "@storybook/builder-webpack5": "^6.5.10",
+    "@storybook/manager-webpack5": "^6.5.10",
+    "@storybook/node-logger": "^6.5.10",
+    "@storybook/preset-create-react-app": "^4.1.2",
+    "@storybook/react": "^6.5.10",
+    "@storybook/testing-library": "^0.0.13",
     "@types/ramda": "^0.28.15",
+    "babel-plugin-named-exports-order": "^0.0.2",
     "commitizen": "^4.2.5",
     "cz-conventional-changelog": "^3.3.0",
     "eslint-config-airbnb": "^19.0.4",
@@ -43,7 +59,14 @@
     "eslint-plugin-prettier": "^4.2.1",
     "husky": "6.0.0",
     "lint-staged": "10.5.4",
-    "prettier": "^2.7.1"
+    "prettier": "^2.7.1",
+    "prop-types": "^15.8.1",
+    "stylelint": "^14.11.0",
+    "stylelint-config-prettier": "^9.0.3",
+    "stylelint-config-standard": "^28.0.0",
+    "stylelint-order": "^5.0.0",
+    "stylelint-prettier": "^2.0.0",
+    "webpack": "^5.74.0"
   },
   "config": {
     "commitizen": {
@@ -60,6 +83,18 @@
       "last 1 chrome version",
       "last 1 firefox version",
       "last 1 safari version"
+    ]
+  },
+  "eslintConfig": {
+    "overrides": [
+      {
+        "files": [
+          "**/*.stories.*"
+        ],
+        "rules": {
+          "import/no-anonymous-default-export": "off"
+        }
+      }
     ]
   }
 }

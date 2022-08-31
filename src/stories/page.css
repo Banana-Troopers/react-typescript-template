@@ -1,0 +1,82 @@
+section {
+  margin: 0 auto;
+  padding: 48px 20px;
+
+  max-width: 600px;
+
+  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+
+  color: #333;
+}
+
+section h2 {
+  margin: 0 0 4px;
+
+  display: inline-block;
+
+  font-size: 32px;
+  font-weight: 900;
+  line-height: 1;
+  vertical-align: top;
+}
+
+section p {
+  margin: 1em 0;
+}
+
+section a {
+  text-decoration: none;
+
+  color: #1ea7fd;
+}
+
+section ul {
+  margin: 1em 0;
+  padding-left: 30px;
+}
+
+section li {
+  margin-bottom: 8px;
+}
+
+section .tip {
+  margin-right: 10px;
+  padding: 4px 12px;
+
+  display: inline-block;
+
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 12px;
+  vertical-align: top;
+
+  color: #66bf3c;
+  background: #e7fdd8;
+  border-radius: 1em;
+}
+
+section .tipWrapper {
+  margin-top: 40px;
+  margin-bottom: 40px;
+
+  font-size: 13px;
+  line-height: 20px;
+}
+
+section .tipWrapper svg {
+  margin-top: 3px;
+  margin-right: 4px;
+
+  display: inline-block;
+
+  width: 12px;
+  height: 12px;
+
+  vertical-align: top;
+}
+
+section .tipWrapper svg path {
+  fill: #1ea7fd;
+}
