@@ -10,7 +10,7 @@ test('renders learn react link', () => {
   const view = render(
     <Provider store={store}>
       <App />
-    </Provider>
+    </Provider>,
   );
 
   // eslint-disable-next-line testing-library/prefer-screen-queries
