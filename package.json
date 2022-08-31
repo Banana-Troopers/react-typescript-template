@@ -6,8 +6,8 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
-    "test:watch": "jest --watch",
+    "test": "react-scripts test --watchAll=false",
+    "test:watch": "react-scripts test",
     "coverage": "jest --all --coverage",
     "eject": "react-scripts eject",
     "lint": "eslint ./src --fix",
